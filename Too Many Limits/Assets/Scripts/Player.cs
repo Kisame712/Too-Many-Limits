@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         {
             playerAnim.SetTrigger("jump");
             playerAudioSource.PlayOneShot(jumpSound, jumpVolume);
-            playerRb.velocity = new Vector2(playerRb.velocity.x, jumpSpeed);
+            playerRb.velocity = new Vector2(0, jumpSpeed);
         }
     }
 
