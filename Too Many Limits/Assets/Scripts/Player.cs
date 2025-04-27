@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour
 
 
     [Header("Animations and Effects")]
-    Animator playerAnim;
+    public Animator playerAnim;
  
 
     [Header("Player Audio")]
@@ -29,7 +30,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-        playerAnim = GetComponent<Animator>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
         playerAudioSource = GetComponent<AudioSource>();
     }
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerDeath();
         Flip();
         ButtonManager();
     }
@@ -112,6 +113,12 @@ public class Player : MonoBehaviour
         }
     }
 
- 
+    void PlayerDeath()
+    {
+        if(transform.position.y < -11f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 
 }
