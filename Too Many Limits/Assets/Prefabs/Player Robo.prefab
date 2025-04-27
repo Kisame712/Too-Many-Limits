@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6047631206994718625}
   - component: {fileID: 1146057454768677719}
+  - component: {fileID: 11968235135204090}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &11968235135204090
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785513958614026341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e15e503bd8176de4191a2f47acfdbccb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8908734969234718959
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +115,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696430059577346887}
-  - component: {fileID: 2227569507265663200}
   - component: {fileID: 483003735683816436}
   - component: {fileID: 8931703175051517945}
   - component: {fileID: 3840631926185629253}
@@ -123,27 +144,6 @@ Transform:
   - {fileID: 6047631206994718625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2227569507265663200
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8908734969234718959}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f83e643624b51294cbc0b160e0617804, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &483003735683816436
 AudioSource:
   m_ObjectHideFlags: 0
@@ -392,5 +392,6 @@ MonoBehaviour:
   playerSpeed: 8
   jumpSpeed: 15
   currentPosition: 0
+  playerAnim: {fileID: 11968235135204090}
   jumpSound: {fileID: 8300000, guid: afd3af4f99bb03b4e9d74588687c0d97, type: 3}
   jumpVolume: 0.78

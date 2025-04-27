@@ -62,4 +62,9 @@ public class DialogManager : MonoBehaviour
             startGameButton.SetActive(true);
         }
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
